@@ -2,10 +2,140 @@
 html,
 body {
     box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 
+body,
+html {
+    width: 100%;
+}
+
+h1,
+h2,
+h3,
+div,
+header,
+main {
+    /* border: 1px solid black; */
+}
 
 body {
     font-family: 'Poppins', sans-serif;
     font-size: 15px;
+    color: var(--clr-grayish-blue);
+    background-color: var(--clr-very-light-gray);
+    height: 100%;
+}
+
+header {
+    margin: 3em;
+    margin-top: 7em;
+    width: min(80%, 500px);
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+h2 {
+    font-weight: 200;
+    margin: auto;
+    text-align: center;
+    color: var(--clr-dark-blue);
+}
+
+h1 {
+    margin: auto;
+    font-size: 1.4rem;
+    text-align: center;
+    color: var(--clr-dark-blue);
+    font-weight: 600;
+    margin-bottom: 1em;
+}
+
+h3 {
+    color: var(--clr-dark-blue);
+    font-weight: 600;
+    font-size: 1.65em;
+    margin-bottom: 0.5em;
+    letter-spacing: 0;
+}
+
+.heading-text {
+    text-align: center;
+}
+
+main {
+    width: min(90%, 1000px);
+    margin: auto;
+}
+
+.card {
+    background-color: white;
+    border-radius: 0.6em;
+    padding-inline: 2.5em;
+    padding-block: 1em;
+    margin-inline: 1em;
+    margin-block: 2.5em;
+    font-size: 0.8em;
+    letter-spacing: 0.4px;
+    box-shadow: 0 1em 1em var(--clr-box-shadow);
+}
+
+.one {
+    border-top: 4px solid var(--clr-cyan);
+}
+
+.two {
+    border-top: 4px solid var(--clr-red);
+}
+
+.three {
+    border-top: 4px solid var(--clr-orange);
+}
+
+.four {
+    border-top: 4px solid var(--clr-blue);
+}
+
+img {
+    display: block;
+    text-align: end;
+    margin: 2em 0 1em auto;
+}
+
+.column div:first-of-type {
+    margin-top: 0;
+}
+
+@media (min-width:750px) {
+    main {
+        display: flex;
+        justify-content: center;
+    }
+
+    .card {
+        margin-block: 1em;
+    }
+
+    .column {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex-basis: 33%;
+    }
+}
+
+:root {
+    --clr-red: hsl(0, 78%, 62%);
+    --clr-cyan: hsl(180, 62%, 55%);
+    --clr-orange: hsl(34, 97%, 64%);
+    --clr-blue: hsl(212, 86%, 64%);
+
+    --clr-dark-blue: hsl(234, 12%, 34%);
+    --clr-grayish-blue: hsl(229, 6%, 66%);
+    --clr-very-light-gray: hsl(0, 0%, 98%);
+
+    --clr-box-shadow: hsla(229, 6%, 66%, 0.1);
 }
